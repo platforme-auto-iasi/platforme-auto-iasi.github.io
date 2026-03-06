@@ -536,7 +536,6 @@
       display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
     }
     .faq-q .arrow { color: var(--orange); font-size: .8rem; flex-shrink: 0; margin-top: 2px; }
-    .faq-a { font-size: .85rem; color: var(--muted); line-height: 1.7; }
 
     /* ── CTA STRIP ── */
     .cta-strip {
@@ -646,6 +645,14 @@
     .statement-text p { font-size: .95rem; color: var(--muted); line-height: 1.8; }
     .statement-text strong { color: var(--text); }
 
+
+    .zone-card-link { text-decoration: none; cursor: pointer; }
+    .zone-card-link:hover { border-color: var(--orange); background: rgba(255,92,0,.06); }
+    .zone-card-link .zone-name { transition: color .2s; }
+    .zone-card-link:hover .zone-name { color: var(--orange); }
+    .zone-arrow { margin-left: auto; color: var(--orange); font-size: .8rem; opacity: 0; transition: opacity .2s, transform .2s; }
+    .zone-card-link:hover .zone-arrow { opacity: 1; transform: translateX(3px); }
+    
     /* ── SCROLL TOP ── */
     .scroll-top {
       position: fixed; bottom: 90px; right: 36px;
@@ -676,6 +683,13 @@
       .dispatch-stats { grid-template-columns: 1fr 1fr 1fr; }
       .live-bar { padding: 8px 20px; font-size: .72rem; }
     }
+
+    /* FAQ collapsable */
+    .faq-a { display: none; font-size: .88rem; color: var(--muted); line-height: 1.7; margin-top: 10px; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-q { cursor: pointer; user-select: none; }
+    .faq-arrow { display: inline-block; transition: transform .3s; color: var(--orange); font-size: .8rem; margin-left: 8px; }
+    .faq-item.open .faq-arrow { transform: rotate(90deg); }
   </style>
 </head>
 <body>
@@ -914,22 +928,22 @@
     <h2>Zone deservite <span class="dim">în Iași</span></h2>
     <p class="section-desc">Dispeceratul coordonează platforme auto în toate cartierele orașului Iași și localitățile din județ.</p>
     <div class="zones-grid">
-      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Copou</span></div>
-      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Nicolina</span></div>
-      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Tătărași</span></div>
-      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Păcurari</span></div>
-      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Alexandru cel Bun</span></div>
-      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Bucium</span></div>
-      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">CUG</span></div>
+      <a class="zone-card zone-card-link" href="copou.html"><span class="zone-dot"></span><span class="zone-name">Copou</span><span class="zone-arrow">→</span></a>
+      <a class="zone-card zone-card-link" href="nicolina.html"><span class="zone-dot"></span><span class="zone-name">Nicolina</span><span class="zone-arrow">→</span></a>
+      <a class="zone-card zone-card-link" href="tatarasi.html"><span class="zone-dot"></span><span class="zone-name">Tătărași</span><span class="zone-arrow">→</span></a>
+      <a class="zone-card zone-card-link" href="pacurari.html"><span class="zone-dot"></span><span class="zone-name">Păcurari</span><span class="zone-arrow">→</span></a>
+      <a class="zone-card zone-card-link" href="alexandru-cel-bun.html"><span class="zone-dot"></span><span class="zone-name">Alexandru cel Bun</span><span class="zone-arrow">→</span></a>
+      <a class="zone-card zone-card-link" href="bucium.html"><span class="zone-dot"></span><span class="zone-name">Bucium</span><span class="zone-arrow">→</span></a>
+      <a class="zone-card zone-card-link" href="cug.html"><span class="zone-dot"></span><span class="zone-name">CUG</span><span class="zone-arrow">→</span></a>
       <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Dacia</span></div>
       <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Frumoasa</span></div>
       <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Moara de Vânt</span></div>
       <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Lunca Cetățuii</span></div>
       <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Miroslava</span></div>
       <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Valea Lupului</span></div>
-      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Vaslui</span></div>
-      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Târgu Frumos</span></div>
-      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Lețcani</span></div>
+      <a class="zone-card zone-card-link" href="vaslui.html"><span class="zone-dot"></span><span class="zone-name">Vaslui</span><span class="zone-arrow">→</span></a>
+      <a class="zone-card zone-card-link" href="targu-frumos.html"><span class="zone-dot"></span><span class="zone-name">Târgu Frumos</span><span class="zone-arrow">→</span></a>
+      <a class="zone-card zone-card-link" href="letcani.html"><span class="zone-dot"></span><span class="zone-name">Lețcani</span><span class="zone-arrow">→</span></a>
       <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Pașcani</span></div>
       <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Hârlău</span></div>
       <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Rediu</span></div>
@@ -946,27 +960,27 @@
     <p class="section-desc">Răspunsuri la cele mai comune întrebări despre serviciile noastre de platformă auto în Iași.</p>
     <div class="faq-grid">
       <div class="faq-item">
-        <div class="faq-q">Ce este un dispecerat de platformă auto? <span class="arrow">▸</span></div>
+        <div class="faq-q">Ce este un dispecerat de platformă auto? <span class="faq-arrow">▸</span></div>
         <div class="faq-a">Un dispecerat coordonează platforme auto disponibile în zonă și le trimite rapid la clienți. Suni la un singur număr și dispecerul găsește cea mai apropiată platformă disponibilă pentru tine.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Cât costă o platformă auto în Iași? <span class="arrow">▸</span></div>
+        <div class="faq-q">Cât costă o platformă auto în Iași? <span class="faq-arrow">▸</span></div>
         <div class="faq-a">Prețul de pornire este de la 150 RON pentru deplasări în interiorul orașului Iași. Pentru curse în afara orașului, tariful este de la 3 RON/km. Prețul final depinde de distanță și tipul autovehiculului.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Platforma auto vine și noaptea sau în weekend? <span class="arrow">▸</span></div>
+        <div class="faq-q">Platforma auto vine și noaptea sau în weekend? <span class="faq-arrow">▸</span></div>
         <div class="faq-a">Da, dispeceratul este activ non-stop, 24 de ore din 24, 7 zile din 7, inclusiv sărbători legale și weekend. Răspundem la orice oră.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Pot transporta o mașină fără ITP sau neinmatriculată? <span class="arrow">▸</span></div>
+        <div class="faq-q">Pot transporta o mașină fără ITP sau neinmatriculată? <span class="faq-arrow">▸</span></div>
         <div class="faq-a">Da, platformele noastre sunt acreditate RAR și pot transporta legal orice tip de autovehicul — fără ITP, fără inmatriculare, fără RCA sau avariate.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Primesc factură fiscală pentru serviciul de platformă? <span class="arrow">▸</span></div>
+        <div class="faq-q">Primesc factură fiscală pentru serviciul de platformă? <span class="faq-arrow">▸</span></div>
         <div class="faq-a">Da, fiecare intervenție este însoțită de factură fiscală. Serviciul este asigurat CMR, deci mașina ta este protejată financiar pe toată durata transportului.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">În cât timp ajunge platforma auto la mine în Iași? <span class="arrow">▸</span></div>
+        <div class="faq-q">În cât timp ajunge platforma auto la mine în Iași? <span class="faq-arrow">▸</span></div>
         <div class="faq-a">Timpul mediu de intervenție în Iași este sub 30 de minute. Depinde de locație și trafic, dar dispecerul îți confirmă timpul estimat la momentul apelului.</div>
       </div>
     </div>
@@ -1046,12 +1060,12 @@
     </div>
     <div>
       <h4>Zone principale</h4>
-      <a href="#zone">Platformă auto Copou</a>
-      <a href="#zone">Platformă auto Nicolina</a>
-      <a href="#zone">Platformă auto Tătărași</a>
-      <a href="#zone">Platformă auto Păcurari</a>
-      <a href="#zone">Platformă auto Alexandru</a>
-      <a href="#zone">Platformă auto Bucium</a>
+      <a href="copou.html">Platformă auto Copou</a>
+      <a href="nicolina.html">Platformă auto Nicolina</a>
+      <a href="tatarasi.html">Platformă auto Tătărași</a>
+      <a href="pacurari.html">Platformă auto Păcurari</a>
+      <a href="alexandru-cel-bun.html">Platformă auto Alexandru</a>
+      <a href="bucium.html">Platformă auto Bucium</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -1068,20 +1082,35 @@
 
 <script>
   // Nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const mainNav = document.getElementById('mainNav');
-  if (navToggle) {
-    navToggle.addEventListener('click', () => {
-      navToggle.classList.toggle('open');
-      mainNav.classList.toggle('open');
+  var nt = document.getElementById('navToggle');
+  var mn = document.getElementById('mainNav');
+  if (nt) {
+    nt.addEventListener('click', function() {
+      nt.classList.toggle('open');
+      mn.classList.toggle('open');
     });
   }
   // Scroll top
-  const scrollBtn = document.getElementById('scrollTop');
-  window.addEventListener('scroll', () => {
-    scrollBtn.classList.toggle('visible', window.scrollY > 300);
+  var sb = document.getElementById('scrollTop');
+  if (sb) {
+    window.addEventListener('scroll', function() {
+      sb.classList.toggle('visible', window.scrollY > 300);
+    });
+    sb.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+  // FAQ collapsable
+  document.querySelectorAll('.faq-item').forEach(function(item) {
+    var q = item.querySelector('.faq-q');
+    if (q) {
+      q.addEventListener('click', function() {
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+        if (!isOpen) { item.classList.add('open'); }
+      });
+    }
   });
-  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 </script>
 
 </body>

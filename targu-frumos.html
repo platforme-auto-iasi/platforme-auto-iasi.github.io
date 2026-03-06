@@ -102,7 +102,7 @@
     .faq-item:hover{border-color:var(--orange)}
     .faq-q{font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:8px;display:flex;justify-content:space-between;gap:12px}
     .faq-q .arr{color:var(--orange);font-size:.8rem;flex-shrink:0;margin-top:2px}
-    .faq-a{font-size:.88rem;color:var(--muted);line-height:1.7}
+    .faq-a{display:none;font-size:.88rem;color:var(--muted);line-height:1.7;margin-top:10px}.faq-item.open .faq-a{display:block}.faq-q{cursor:pointer;user-select:none}.faq-arrow{display:inline-block;transition:transform .3s;color:var(--orange)}.faq-item.open .faq-arrow{transform:rotate(90deg)}
     .zones-nav-section{background:var(--dark2);border-top:1px solid var(--border);padding:48px}
     .zones-nav-section .inner{max-width:1200px;margin:0 auto}
     .zones-nav-section h3{font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:20px;letter-spacing:1px}
@@ -254,19 +254,19 @@
     <p class="section-desc">Tot ce trebuie să știi despre serviciile de platformă auto în Târgu Frumos și împrejurimi.</p>
     <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-q" itemprop="name">Cât costă platforma de la Iași la Târgu Frumos? <span class="arr">▸</span></div>
+        <div class="faq-q" itemprop="name">Cât costă platforma de la Iași la Târgu Frumos? <span class="faq-arrow">▸</span></div>
         <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
           <span itemprop="text">De la 3 RON/km. Distanța este de aproximativ 55 km. Dispecerul confirmă tariful exact la apel.</span>
         </div>
       </div>
       <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-q" itemprop="name">Ajungeți și la Pașcani sau Hârlău din zona Târgu Frumos? <span class="arr">▸</span></div>
+        <div class="faq-q" itemprop="name">Ajungeți și la Pașcani sau Hârlău din zona Târgu Frumos? <span class="faq-arrow">▸</span></div>
         <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
           <span itemprop="text">Da, acoperim Pașcani, Hârlău și toate localitățile din nordul județului Iași.</span>
         </div>
       </div>
       <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-q" itemprop="name">Platforma vine și pe E583 noaptea? <span class="arr">▸</span></div>
+        <div class="faq-q" itemprop="name">Platforma vine și pe E583 noaptea? <span class="faq-arrow">▸</span></div>
         <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
           <span itemprop="text">Da, dispeceratul este activ non-stop inclusiv pentru intervenții nocturne pe E583.</span>
         </div>
@@ -345,11 +345,36 @@
 <button class="scroll-top" id="scrollTop" aria-label="Sus">↑</button>
 
 <script>
-  const nt=document.getElementById('navToggle'),mn=document.getElementById('mainNav');
-  if(nt){nt.addEventListener('click',()=>{nt.classList.toggle('open');mn.classList.toggle('open')})}
-  const sb=document.getElementById('scrollTop');
-  window.addEventListener('scroll',()=>sb.classList.toggle('visible',window.scrollY>300));
-  sb.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  // Nav toggle
+  var nt = document.getElementById('navToggle');
+  var mn = document.getElementById('mainNav');
+  if (nt) {
+    nt.addEventListener('click', function() {
+      nt.classList.toggle('open');
+      mn.classList.toggle('open');
+    });
+  }
+  // Scroll top
+  var sb = document.getElementById('scrollTop');
+  if (sb) {
+    window.addEventListener('scroll', function() {
+      sb.classList.toggle('visible', window.scrollY > 300);
+    });
+    sb.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+  // FAQ collapsable
+  document.querySelectorAll('.faq-item').forEach(function(item) {
+    var q = item.querySelector('.faq-q');
+    if (q) {
+      q.addEventListener('click', function() {
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+        if (!isOpen) { item.classList.add('open'); }
+      });
+    }
+  });
 </script>
 </body>
 </html>

@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platformă Auto Iași – Dispecerat Tractări 24/7 | Sună Acum</title>
+  <meta name="description" content="Dispecerat platformă auto Iași, disponibil non-stop 24/7. Platforme auto, tractări, asistență rutieră în Iași și județ. Răspundem imediat." />
+  <meta name="keywords" content="platforma auto iasi, platforme auto iasi, platforma iasi, platforme iasi, platforma auto iasi non stop, platforma iasi 24/7, tractari auto iasi, dispecerat tractari iasi, asistenta rutiera iasi, platforma iasi nonstop" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Dispeceratul de Tractări — Platformă Auto Iași",
+  "description": "Dispecerat platformă auto Iași, disponibil non-stop 24/7. Platforme auto acreditate RAR, tractări, asistență rutieră în Iași și județ.",
+  "telephone": "+40742261216",
+  "openingHours": "Mo-Su 00:00-23:59",
+  "areaServed": {"@type": "Place", "name": "Iași, România"},
+  "serviceType": ["Platformă auto", "Tractare auto", "Asistență rutieră", "Dispecerat auto"],
+  "priceRange": "de la 150 RON",
+  "availableLanguage": "Romanian"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Ce este un dispecerat de platformă auto?","acceptedAnswer":{"@type":"Answer","text":"Un dispecerat coordonează platforme auto disponibile în zonă și le trimite rapid la clienți. Suni la un singur număr și dispecerul găsește cea mai apropiată platformă disponibilă pentru tine."}},
+    {"@type":"Question","name":"Cât costă o platformă auto în Iași?","acceptedAnswer":{"@type":"Answer","text":"Prețul de pornire este de la 150 RON pentru deplasări în interiorul orașului Iași. Pentru curse în afara orașului, tariful este de la 3 RON/km."}},
+    {"@type":"Question","name":"Platforma auto vine și noaptea?","acceptedAnswer":{"@type":"Answer","text":"Da, dispeceratul este activ non-stop, 24 de ore din 24, 7 zile din 7, inclusiv sărbători legale și weekend."}}
+  ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Mulish:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #ff5c00;
+      --orange2: #ff8c42;
+      --dark: #0f1117;
+      --dark2: #181c26;
+      --card: #1e2330;
+      --border: #2a2f3d;
+      --text: #f0f2f7;
+      --muted: #7a8099;
+      --white: #ffffff;
+      --green: #00c853;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--dark);
+      color: var(--text);
+      font-family: 'Mulish', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── GRID OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,92,0,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,92,0,.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── LIVE INDICATOR ── */
+    .live-bar {
+      background: var(--orange);
+      padding: 8px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: 'Oswald', sans-serif;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 10;
+    }
+    .live-dot {
+      width: 8px; height: 8px;
+      background: #fff;
+      border-radius: 50%;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky; top: 0;
+      background: rgba(15,17,23,.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--white);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 36px; height: 36px;
+      background: var(--orange);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .logo span { color: var(--orange); }
+
+    nav { display: flex; align-items: center; gap: 8px; }
+    .nav-link {
+      font-size: .85rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 7px 14px;
+      border-radius: 6px;
+      transition: color .2s, background .2s;
+    }
+    .nav-link:hover { color: var(--text); background: var(--card); }
+    .nav-link.active { color: var(--orange); }
+
+    .nav-cta {
+      background: var(--orange);
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: .85rem;
+      letter-spacing: 1px;
+      padding: 9px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+      margin-left: 8px;
+    }
+    .nav-cta:hover { background: var(--orange2); transform: translateY(-1px); }
+
+    .nav-toggle {
+      display: none; background: none; border: none;
+      cursor: pointer; padding: 6px; flex-direction: column; gap: 5px;
+    }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text); transition: all .3s; }
+    .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+    @media(max-width:860px) {
+      header { padding: 14px 20px; }
+      .nav-toggle { display: flex; }
+      nav {
+        display: none; flex-direction: column; align-items: flex-start;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--dark2); border-top: 1px solid var(--border);
+        padding: 16px 20px; gap: 4px; z-index: 200;
+      }
+      nav.open { display: flex; }
+      .nav-link { width: 100%; padding: 12px 8px; border-radius: 0; border-bottom: 1px solid var(--border); }
+      .nav-cta { margin: 12px 0 0; width: 100%; text-align: center; }
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 60px;
+      padding: 80px 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+      z-index: 1;
+    }
+
+    .hero-left { position: relative; }
+
+    .dispatch-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,92,0,.1);
+      border: 1px solid rgba(255,92,0,.3);
+      color: var(--orange);
+      font-family: 'Oswald', sans-serif;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+      animation: fadeUp .6s ease both;
+    }
+    .dispatch-dot { width: 6px; height: 6px; background: var(--orange); border-radius: 50%; animation: blink 1s infinite; }
+
+    h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 24px;
+      animation: fadeUp .7s ease .1s both;
+    }
+    h1 em {
+      font-style: normal;
+      color: var(--orange);
+      position: relative;
+    }
+    h1 em::after {
+      content: '';
+      position: absolute;
+      bottom: 2px; left: 0; right: 0;
+      height: 3px;
+      background: var(--orange);
+      opacity: .3;
+      border-radius: 2px;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 36px;
+      max-width: 480px;
+      animation: fadeUp .7s ease .2s both;
+    }
+    .hero-desc strong { color: var(--text); }
+
+    .hero-actions {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      animation: fadeUp .7s ease .3s both;
+    }
+
+    .btn-call {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--orange);
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: .5px;
+      padding: 16px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 8px 32px rgba(255,92,0,.3);
+    }
+    .btn-call:hover { background: var(--orange2); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(255,92,0,.4); }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 15px 28px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: border-color .2s, background .2s;
+    }
+    .btn-outline:hover { border-color: var(--orange); background: rgba(255,92,0,.05); }
+
+    .hero-trust {
+      display: flex; gap: 24px; flex-wrap: wrap;
+      margin-top: 40px;
+      animation: fadeUp .7s ease .4s both;
+    }
+    .trust-pill {
+      display: flex; align-items: center; gap: 8px;
+      font-size: .82rem; color: var(--muted);
+    }
+    .trust-pill .icon { font-size: 1rem; }
+
+    /* ── HERO RIGHT — DISPATCH CARD ── */
+    .hero-right {
+      position: relative;
+      animation: fadeUp .8s ease .2s both;
+    }
+
+    .dispatch-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .dispatch-card::before {
+      content: '';
+      position: absolute;
+      top: -50%; right: -20%;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(255,92,0,.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .card-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 24px;
+    }
+    .card-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .card-status {
+      display: flex; align-items: center; gap: 6px;
+      font-size: .75rem; color: var(--green);
+      font-weight: 600;
+    }
+    .status-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; animation: blink 1.5s infinite; }
+
+    .phone-display {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    .phone-sub { font-size: .82rem; color: var(--muted); margin-bottom: 28px; }
+
+    .dispatch-stats {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px; margin-bottom: 24px;
+    }
+    .dstat {
+      background: var(--dark2);
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+    }
+    .dstat-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.4rem; font-weight: 800;
+      color: var(--orange);
+    }
+    .dstat-label { font-size: .7rem; color: var(--muted); margin-top: 2px; }
+
+    .keyword-tags {
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .tag {
+      background: var(--dark2);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .72rem;
+      padding: 4px 10px;
+      border-radius: 100px;
+      transition: border-color .2s, color .2s;
+    }
+    .tag:hover { border-color: var(--orange); color: var(--orange); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── KEYWORDS SECTION ── */
+    .keywords-section {
+      background: var(--dark2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 48px;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+    .keywords-scroll {
+      display: flex; gap: 40px;
+      animation: scroll 25s linear infinite;
+      white-space: nowrap;
+    }
+    .keywords-scroll:hover { animation-play-state: paused; }
+    .kw-item {
+      font-family: 'Oswald', sans-serif;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+    .kw-item span { color: var(--orange); margin-right: 8px; }
+    @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ── SECTIONS COMMON ── */
+    section { position: relative; z-index: 1; }
+    .section-inner { max-width: 1200px; margin: 0 auto; padding: 80px 48px; }
+    .section-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--orange); margin-bottom: 10px;
+    }
+    h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 800; color: var(--white);
+      line-height: 1.1; margin-bottom: 16px;
+    }
+    h2 .dim { color: var(--muted); font-weight: 400; }
+    .section-desc { font-size: 1rem; color: var(--muted); max-width: 560px; line-height: 1.8; margin-bottom: 48px; }
+
+    /* ── HOW IT WORKS ── */
+    .how-section { background: var(--dark); }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2px;
+    }
+    .step-card {
+      background: var(--card);
+      padding: 36px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: background .2s;
+    }
+    .step-card:hover { background: #222840; }
+    .step-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 4rem; font-weight: 800;
+      color: rgba(255,92,0,.08);
+      position: absolute; top: 16px; right: 20px;
+      line-height: 1;
+    }
+    .step-icon { font-size: 2rem; margin-bottom: 16px; display: block; }
+    .step-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--white); margin-bottom: 8px;
+    }
+    .step-desc { font-size: .88rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── SERVICES ── */
+    .services-section { background: var(--dark2); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      transition: border-color .2s, transform .2s;
+    }
+    .service-card:hover { border-color: var(--orange); transform: translateY(-4px); }
+    .service-icon {
+      width: 52px; height: 52px;
+      background: rgba(255,92,0,.1);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    .service-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.15rem; font-weight: 700;
+      color: var(--white); margin-bottom: 10px;
+    }
+    .service-desc { font-size: .88rem; color: var(--muted); line-height: 1.7; }
+    .service-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+    .service-tag {
+      font-size: .72rem; color: var(--orange);
+      background: rgba(255,92,0,.08);
+      border: 1px solid rgba(255,92,0,.2);
+      padding: 3px 10px; border-radius: 100px;
+    }
+
+    /* ── ZONES ── */
+    .zones-section { background: var(--dark); }
+    .zones-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 8px;
+    }
+    .zone-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      display: flex; align-items: center; gap: 10px;
+      transition: border-color .2s, background .2s;
+      cursor: default;
+    }
+    .zone-card:hover { border-color: var(--orange); background: rgba(255,92,0,.04); }
+    .zone-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; flex-shrink: 0; }
+    .zone-name { font-size: .88rem; font-weight: 500; color: var(--text); }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--dark2); }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 22px;
+      cursor: pointer;
+      transition: border-color .2s;
+    }
+    .faq-item:hover { border-color: var(--orange); }
+    .faq-q {
+      font-family: 'Oswald', sans-serif;
+      font-size: .95rem; font-weight: 700;
+      color: var(--white); margin-bottom: 10px;
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
+    }
+    .faq-q .arrow { color: var(--orange); font-size: .8rem; flex-shrink: 0; margin-top: 2px; }
+    .faq-a { font-size: .85rem; color: var(--muted); line-height: 1.7; }
+
+    /* ── CTA STRIP ── */
+    .cta-strip {
+      background: linear-gradient(135deg, var(--orange) 0%, #ff3d00 100%);
+      padding: 80px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-strip::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .cta-strip .inner { position: relative; max-width: 700px; margin: 0 auto; }
+    .cta-strip h2 { color: #fff; font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 16px; }
+    .cta-strip p { color: rgba(255,255,255,.85); font-size: 1.05rem; margin-bottom: 36px; line-height: 1.7; }
+    .cta-strip .btn-white {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #fff; color: var(--orange);
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700; font-size: 1.2rem;
+      padding: 18px 44px; border-radius: 14px;
+      text-decoration: none;
+      box-shadow: 0 8px 40px rgba(0,0,0,.2);
+      transition: transform .15s, box-shadow .2s;
+    }
+    .cta-strip .btn-white:hover { transform: translateY(-2px); box-shadow: 0 12px 50px rgba(0,0,0,.3); }
+    .cta-number {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.5rem; font-weight: 800;
+      color: #fff; letter-spacing: 3px;
+      margin-top: 24px; display: block;
+      text-decoration: none;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      padding: 48px 48px 24px;
+      position: relative; z-index: 1;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px; margin-bottom: 40px;
+    }
+    .footer-brand {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem; font-weight: 800;
+      color: var(--white); margin-bottom: 12px;
+    }
+    .footer-brand span { color: var(--orange); }
+    .footer-desc { font-size: .85rem; color: var(--muted); line-height: 1.8; max-width: 300px; }
+    footer h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: .75rem; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 16px;
+    }
+    footer a { color: var(--muted); text-decoration: none; display: block; font-size: .88rem; margin-bottom: 10px; transition: color .2s; }
+    footer a:hover { color: var(--orange); }
+    .footer-bottom {
+      max-width: 1200px; margin: 0 auto;
+      padding-top: 24px; border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: .78rem; color: var(--muted); flex-wrap: wrap; gap: 8px;
+    }
+
+    /* ── FAB ── */
+    .fab {
+      position: fixed; bottom: 28px; right: 28px;
+      background: var(--orange);
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700; font-size: 1rem;
+      letter-spacing: 1px;
+      padding: 14px 26px;
+      border-radius: 100px;
+      text-decoration: none;
+      z-index: 100;
+      box-shadow: 0 4px 30px rgba(255,92,0,.5);
+      display: flex; align-items: center; gap: 8px;
+      animation: fabpulse 2.5s infinite;
+      transition: transform .15s;
+    }
+    .fab:hover { transform: scale(1.05); }
+    @keyframes fabpulse {
+      0%,100% { box-shadow: 0 4px 30px rgba(255,92,0,.5); }
+      50%      { box-shadow: 0 4px 50px rgba(255,92,0,.8); }
+    }
+
+    /* ── PARTNERS ── */
+    .partners-section { background: var(--dark); border-top: 1px solid var(--border); }
+    .partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-bottom: 24px; }
+    .partner-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 28px 24px; transition: border-color .2s, transform .2s; }
+    .partner-card:hover { border-color: var(--orange); transform: translateY(-3px); }
+    .partner-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+    .partner-title { font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 10px; letter-spacing: .5px; }
+    .partner-desc { font-size: .88rem; color: var(--muted); line-height: 1.7; }
+    .partners-statement { background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--orange); border-radius: 12px; padding: 28px 24px; display: flex; gap: 20px; align-items: flex-start; margin-top: 12px; }
+    .statement-icon { font-size: 2rem; flex-shrink: 0; }
+    .statement-text p { font-size: .95rem; color: var(--muted); line-height: 1.8; }
+    .statement-text strong { color: var(--text); }
+
+    /* ── SCROLL TOP ── */
+    .scroll-top {
+      position: fixed; bottom: 90px; right: 36px;
+      width: 40px; height: 40px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; color: var(--muted); font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; z-index: 99;
+      opacity: 0; pointer-events: none;
+      transition: opacity .3s, border-color .2s, color .2s;
+    }
+    .scroll-top.visible { opacity: 1; pointer-events: all; }
+    .scroll-top:hover { border-color: var(--orange); color: var(--orange); }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:900px) {
+      .hero { grid-template-columns: 1fr; padding: 60px 24px; min-height: auto; gap: 40px; }
+      .hero-right { display: none; }
+      .section-inner { padding: 60px 24px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .keywords-section { padding: 20px 24px; }
+      .cta-strip { padding: 60px 24px; }
+      footer { padding: 48px 24px 24px; }
+    }
+    @media(max-width:600px) {
+      .footer-inner { grid-template-columns: 1fr; }
+      .dispatch-stats { grid-template-columns: 1fr 1fr 1fr; }
+      .live-bar { padding: 8px 20px; font-size: .72rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── LIVE BAR ── -->
+<div class="live-bar">
+  <span class="live-dot"></span>
+  Dispecerat activ — Răspundem non-stop 24/7
+  <span class="live-dot"></span>
+</div>
+
+<!-- ── HEADER ── -->
+<header>
+  <a class="logo" href="/">
+    <div class="logo-icon">🚛</div>
+    Dispeceratul de <span>Tractări</span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Meniu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="mainNav">
+    <a class="nav-link active" href="#servicii">Servicii</a>
+    <a class="nav-link" href="#zone">Zone</a>
+    <a class="nav-link" href="#cum-functioneaza">Cum funcționează</a>
+    <a class="nav-link" href="#intrebari">Întrebări</a>
+    <a class="nav-cta" href="tel:+40742261216">☎ Sună acum</a>
+  </nav>
+</header>
+
+<!-- ── HERO ── -->
+<section>
+  <div class="hero">
+    <div class="hero-left">
+      <div class="dispatch-badge">
+        <span class="dispatch-dot"></span>
+        Dispecerat platformă auto · Iași
+      </div>
+      <h1>
+        <em>Platformă auto</em><br>
+        în Iași —<br>
+        non-stop, 24/7
+      </h1>
+      <p class="hero-desc">
+        Suni la dispecerat și în cel mai scurt timp o <strong>platformă auto</strong> ajunge la tine.
+        Acoperim tot județul Iași — orice cartier, orice oră, orice tip de autovehicul.
+      </p>
+      <div class="hero-actions">
+        <a class="btn-call" href="tel:+40742261216">
+          📞 0742 261 216
+        </a>
+        <a class="btn-outline" href="#cum-functioneaza">
+          Cum funcționează →
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-pill"><span class="icon">✅</span> Platforme acreditate RAR</div>
+        <div class="trust-pill"><span class="icon">🛡️</span> Asigurare CMR</div>
+        <div class="trust-pill"><span class="icon">🧾</span> Factură fiscală</div>
+        <div class="trust-pill"><span class="icon">⚡</span> Intervenție rapidă</div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="dispatch-card">
+        <div class="card-header">
+          <div class="card-title">Dispecerat platformă auto Iași</div>
+          <div class="card-status">
+            <span class="status-dot"></span>
+            Activ acum
+          </div>
+        </div>
+        <div class="phone-display">0742 261 216</div>
+        <div class="phone-sub">Linie directă dispecerat — răspundem imediat</div>
+        <div class="dispatch-stats">
+          <div class="dstat">
+            <div class="dstat-num">24/7</div>
+            <div class="dstat-label">Non-stop</div>
+          </div>
+          <div class="dstat">
+            <div class="dstat-num">&lt;30'</div>
+            <div class="dstat-label">Timp sosire</div>
+          </div>
+          <div class="dstat">
+            <div class="dstat-num">RAR</div>
+            <div class="dstat-label">Acreditat</div>
+          </div>
+        </div>
+        <div class="keyword-tags">
+          <span class="tag">platformă auto iași</span>
+          <span class="tag">platforme iași</span>
+          <span class="tag">platformă iași non stop</span>
+          <span class="tag">tractări iași 24/7</span>
+          <span class="tag">asistență rutieră iași</span>
+          <span class="tag">platformă auto nonstop</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── KEYWORDS SCROLL ── -->
+<div class="keywords-section">
+  <div class="keywords-scroll">
+    <span class="kw-item"><span>▸</span>Platformă auto Iași</span>
+    <span class="kw-item"><span>▸</span>Platforme Iași</span>
+    <span class="kw-item"><span>▸</span>Platformă Iași non-stop</span>
+    <span class="kw-item"><span>▸</span>Platformă auto Iași 24/7</span>
+    <span class="kw-item"><span>▸</span>Tractări auto Iași</span>
+    <span class="kw-item"><span>▸</span>Platformă auto nonstop Iași</span>
+    <span class="kw-item"><span>▸</span>Asistență rutieră Iași</span>
+    <span class="kw-item"><span>▸</span>Platforme auto Iași ieftine</span>
+    <span class="kw-item"><span>▸</span>Platformă auto Iași</span>
+    <span class="kw-item"><span>▸</span>Platforme Iași</span>
+    <span class="kw-item"><span>▸</span>Platformă Iași non-stop</span>
+    <span class="kw-item"><span>▸</span>Platformă auto Iași 24/7</span>
+    <span class="kw-item"><span>▸</span>Tractări auto Iași</span>
+    <span class="kw-item"><span>▸</span>Platformă auto nonstop Iași</span>
+    <span class="kw-item"><span>▸</span>Asistență rutieră Iași</span>
+    <span class="kw-item"><span>▸</span>Platforme auto Iași ieftine</span>
+  </div>
+</div>
+
+<!-- ── HOW IT WORKS ── -->
+<section id="cum-functioneaza" class="how-section">
+  <div class="section-inner">
+    <div class="section-label">Proces simplu</div>
+    <h2>Cum funcționează <span class="dim">dispeceratul</span></h2>
+    <p class="section-desc">Trei pași simpli și platforma auto ajunge la tine oriunde în Iași și județ.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <span class="step-num">01</span>
+        <span class="step-icon">📞</span>
+        <div class="step-title">Suni la dispecerat</div>
+        <p class="step-desc">Dai un telefon la numărul de dispecerat. Preluăm imediat, 24 de ore din 24, 7 zile din 7, inclusiv sărbători.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-num">02</span>
+        <span class="step-icon">📍</span>
+        <div class="step-title">Ne dai locația</div>
+        <p class="step-desc">Îți comunici locația și situația mașinii. Dispecerul identifică cea mai apropiată platformă disponibilă.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-num">03</span>
+        <span class="step-icon">🚛</span>
+        <div class="step-title">Platforma ajunge</div>
+        <p class="step-desc">Platforma auto ajunge la tine în cel mai scurt timp. Transportăm mașina unde ai nevoie, sigur și asigurat.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-num">04</span>
+        <span class="step-icon">🧾</span>
+        <div class="step-title">Primești documente</div>
+        <p class="step-desc">Fiecare intervenție vine cu factură fiscală și asigurare CMR. Totul legal, totul documentat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section id="servicii" class="services-section">
+  <div class="section-inner">
+    <div class="section-label">Ce oferim</div>
+    <h2>Servicii de <span class="dim">platformă auto</span></h2>
+    <p class="section-desc">Dispeceratul nostru coordonează platforme auto pentru orice tip de situație în Iași și împrejurimi.</p>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🚨</div>
+        <div class="service-title">Platformă auto urgență</div>
+        <p class="service-desc">Ai rămas în pană, ai avut un accident sau mașina nu mai pornește? Dispeceratul trimite o platformă auto în regim de urgență.</p>
+        <div class="service-tags">
+          <span class="service-tag">platformă urgență</span>
+          <span class="service-tag">24/7</span>
+          <span class="service-tag">non-stop</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📅</div>
+        <div class="service-title">Platformă auto cu programare</div>
+        <p class="service-desc">Transport planificat al autovehiculului — la service, RAR, dealer sau altă destinație. Alegi data și ora convenabilă.</p>
+        <div class="service-tags">
+          <span class="service-tag">platformă programată</span>
+          <span class="service-tag">transport auto</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏗️</div>
+        <div class="service-title">Platformă auto RAR</div>
+        <p class="service-desc">Mașini fără ITP, neinmatriculate sau fără RCA. Le transportăm legal la RAR sau service cu platforme acreditate.</p>
+        <div class="service-tags">
+          <span class="service-tag">platformă RAR</span>
+          <span class="service-tag">fără ITP</span>
+          <span class="service-tag">neinmatriculat</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🗺️</div>
+        <div class="service-title">Platformă auto județ și țară</div>
+        <p class="service-desc">Acoperim nu doar Iașul ci și împrejurimile — Vaslui, Târgu Frumos, Lețcani, Pașcani și alte localități din Moldova.</p>
+        <div class="service-tags">
+          <span class="service-tag">platformă județ Iași</span>
+          <span class="service-tag">transport distanță</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🚗</div>
+        <div class="service-title">Platformă mașini de lux</div>
+        <p class="service-desc">Transport specializat pentru autoturisme de lux, sport sau de colecție. Echipamente adecvate, manipulare cu grijă maximă.</p>
+        <div class="service-tags">
+          <span class="service-tag">platformă lux</span>
+          <span class="service-tag">mașini speciale</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">💼</div>
+        <div class="service-title">Platformă pentru firme</div>
+        <p class="service-desc">Contracte cu firme pentru servicii regulate de platformă auto. Factură fiscală, raportare, prețuri negociate per volum.</p>
+        <div class="service-tags">
+          <span class="service-tag">platformă B2B</span>
+          <span class="service-tag">contract firmă</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── ZONES ── -->
+<section id="zone" class="zones-section">
+  <div class="section-inner">
+    <div class="section-label">Acoperire</div>
+    <h2>Zone deservite <span class="dim">în Iași</span></h2>
+    <p class="section-desc">Dispeceratul coordonează platforme auto în toate cartierele orașului Iași și localitățile din județ.</p>
+    <div class="zones-grid">
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Copou</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Nicolina</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Tătărași</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Păcurari</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Alexandru cel Bun</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Bucium</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">CUG</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Dacia</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Frumoasa</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Moara de Vânt</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Lunca Cetățuii</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Miroslava</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Valea Lupului</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Vaslui</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Târgu Frumos</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Lețcani</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Pașcani</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Hârlău</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Rediu</span></div>
+      <div class="zone-card"><span class="zone-dot"></span><span class="zone-name">Holboca</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="intrebari" class="faq-section">
+  <div class="section-inner">
+    <div class="section-label">Întrebări frecvente</div>
+    <h2>Ce vrei să <span class="dim">știi</span></h2>
+    <p class="section-desc">Răspunsuri la cele mai comune întrebări despre serviciile noastre de platformă auto în Iași.</p>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Ce este un dispecerat de platformă auto? <span class="arrow">▸</span></div>
+        <div class="faq-a">Un dispecerat coordonează platforme auto disponibile în zonă și le trimite rapid la clienți. Suni la un singur număr și dispecerul găsește cea mai apropiată platformă disponibilă pentru tine.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Cât costă o platformă auto în Iași? <span class="arrow">▸</span></div>
+        <div class="faq-a">Prețul de pornire este de la 150 RON pentru deplasări în interiorul orașului Iași. Pentru curse în afara orașului, tariful este de la 3 RON/km. Prețul final depinde de distanță și tipul autovehiculului.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Platforma auto vine și noaptea sau în weekend? <span class="arrow">▸</span></div>
+        <div class="faq-a">Da, dispeceratul este activ non-stop, 24 de ore din 24, 7 zile din 7, inclusiv sărbători legale și weekend. Răspundem la orice oră.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Pot transporta o mașină fără ITP sau neinmatriculată? <span class="arrow">▸</span></div>
+        <div class="faq-a">Da, platformele noastre sunt acreditate RAR și pot transporta legal orice tip de autovehicul — fără ITP, fără inmatriculare, fără RCA sau avariate.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Primesc factură fiscală pentru serviciul de platformă? <span class="arrow">▸</span></div>
+        <div class="faq-a">Da, fiecare intervenție este însoțită de factură fiscală. Serviciul este asigurat CMR, deci mașina ta este protejată financiar pe toată durata transportului.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">În cât timp ajunge platforma auto la mine în Iași? <span class="arrow">▸</span></div>
+        <div class="faq-a">Timpul mediu de intervenție în Iași este sub 30 de minute. Depinde de locație și trafic, dar dispecerul îți confirmă timpul estimat la momentul apelului.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PARTNERS ── -->
+<section class="partners-section">
+  <div class="section-inner">
+    <div class="section-label">Rețeaua noastră</div>
+    <h2>Colaborăm doar cu <span class="dim">firme verificate</span></h2>
+    <p class="section-desc">Dispeceratul nostru nu trimite orice platformă — colaborăm exclusiv cu firme locale din Iași care au trecut printr-un proces strict de verificare a calității.</p>
+    <div class="partners-grid">
+      <div class="partner-card">
+        <div class="partner-icon">⭐</div>
+        <div class="partner-title">Recenzii excepționale</div>
+        <p class="partner-desc">Fiecare firmă parteneră are un rating de minim 4.8 stele pe Google Maps, confirmat prin sute de recenzii reale. Nu colaborăm cu firme fără istoric dovedit de calitate.</p>
+      </div>
+      <div class="partner-card">
+        <div class="partner-icon">🏆</div>
+        <div class="partner-title">Experiență verificată</div>
+        <p class="partner-desc">Partenerii noștri sunt firme cu ani de activitate în domeniu. Experiența acumulată înseamnă intervenții corecte, fără daune și fără surprize neplăcute pentru autovehiculul tău.</p>
+      </div>
+      <div class="partner-card">
+        <div class="partner-icon">📋</div>
+        <div class="partner-title">Acreditați și asigurați</div>
+        <p class="partner-desc">Toate platformele din rețeaua noastră sunt acreditate RAR și au asigurare CMR activă. Mașina ta este protejată legal și financiar pe toată durata transportului.</p>
+      </div>
+      <div class="partner-card">
+        <div class="partner-icon">🤝</div>
+        <div class="partner-title">Seriozitate dovedită</div>
+        <p class="partner-desc">Tarif comunicat clar înainte de intervenție, respectarea programului și factură fiscală la final — standarde minime pe care le impunem tuturor partenerilor din rețea.</p>
+      </div>
+    </div>
+    <div class="partners-statement">
+      <div class="statement-icon">💬</div>
+      <div class="statement-text">
+        <p><strong>De ce contează asta pentru tine?</strong> Când suni la dispecerat în mijlocul nopții cu mașina blocată, nu ai timp să verifici recenzii și să compari firme. Noi am făcut asta deja. Rețeaua noastră include doar firme locale serioase din Iași — verificate, acreditate și cu recenzii care vorbesc de la sine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-strip">
+  <div class="inner">
+    <h2>Ai nevoie de platformă auto în Iași?</h2>
+    <p>Sună direct la dispecerat. Răspundem imediat, trimitem platforma, rezolvăm situația.<br>Non-stop · Platforme acreditate RAR · Asigurare CMR · Factură fiscală</p>
+    <a class="btn-white" href="tel:+40742261216">
+      📞 Sună dispeceratul acum
+    </a>
+    <a class="cta-number" href="tel:+40742261216">0742 261 216</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Dispeceratul de <span>Tractări</span></div>
+      <p class="footer-desc">
+        Dispecerat platformă auto în Iași, disponibil non-stop 24/7.
+        Coordonăm platforme auto acreditate RAR pentru orice tip de autovehicul,
+        în orice cartier din Iași și județ.
+      </p>
+      <br/>
+      <a href="tel:+40742261216" style="color:var(--orange);font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;">📞 0742 261 216</a>
+    </div>
+    <div>
+      <h4>Servicii</h4>
+      <a href="#servicii">Platformă auto urgență</a>
+      <a href="#servicii">Platformă auto programată</a>
+      <a href="#servicii">Platformă auto RAR</a>
+      <a href="#servicii">Platformă județ și țară</a>
+      <a href="#servicii">Platformă mașini lux</a>
+      <a href="#servicii">Platformă pentru firme</a>
+    </div>
+    <div>
+      <h4>Zone principale</h4>
+      <a href="#zone">Platformă auto Copou</a>
+      <a href="#zone">Platformă auto Nicolina</a>
+      <a href="#zone">Platformă auto Tătărași</a>
+      <a href="#zone">Platformă auto Păcurari</a>
+      <a href="#zone">Platformă auto Alexandru</a>
+      <a href="#zone">Platformă auto Bucium</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Dispeceratul de Tractări · Iași, România</span>
+    <span>Platformă auto Iași · Non-stop 24/7 · 0742 261 216</span>
+  </div>
+</footer>
+
+<!-- ── FAB ── -->
+<a class="fab" href="tel:+40742261216">📞 Sună dispeceratul</a>
+
+<!-- ── SCROLL TOP ── -->
+<button class="scroll-top" id="scrollTop" aria-label="Sus">↑</button>
+
+<script>
+  // Nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      mainNav.classList.toggle('open');
+    });
+  }
+  // Scroll top
+  const scrollBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 300);
+  });
+  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+
+</body>
+</html>
